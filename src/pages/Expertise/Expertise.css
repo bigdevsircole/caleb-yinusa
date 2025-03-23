@@ -1,0 +1,136 @@
+/* General Styles */
+.expertise-page {
+    padding: 2rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .expertise-page h1 {
+    color: #feb100;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .expertise-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .category {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(254, 177, 0, 0.2);
+  }
+  
+  .category h2 {
+    color: #feb100;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #feb100;
+    padding-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .category ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .category ul li {
+    color: white;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  .category ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Responsiveness for 768px */
+  @media (max-width: 768px) {
+    .expertise-page h1 {
+      font-size: 2rem;
+    }
+  
+    .expertise-categories {
+      gap: 1.5rem;
+    }
+  
+    .category {
+      width: 45%;
+    }
+  
+    .category h2 {
+      font-size: 1.5rem;
+    }
+  
+    .category ul li {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Responsiveness for 425px */
+  @media (max-width: 425px) {
+    .expertise-page {
+      padding: 1rem;
+    }
+  
+    .expertise-page h1 {
+      font-size: 1.75rem;
+    }
+  
+    .expertise-categories {
+      gap: 1rem;
+    }
+  
+    .category {
+      width: 100%;
+      max-width: 200px;
+    }
+  
+    .category h2 {
+      font-size: 1.4rem;
+    }
+  
+    .category ul li {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Responsiveness for 375px */
+  @media (max-width: 375px) {
+    .expertise-page h1 {
+      font-size: 1.5rem;
+    }
+  
+    .category h2 {
+      font-size: 1.3rem;
+    }
+  
+    .category ul li {
+      font-size: 0.85rem;
+    }
+  }
