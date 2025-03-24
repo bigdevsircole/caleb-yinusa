@@ -41,37 +41,37 @@ const Home = () => {
     {
       title: "QR-Code Generator",
       description: "You can upload your document in JPEG, JPG and PNG format while you input the URL you want the QR-code to redirect. This website will generate a QR-code below the document which can be downloaded for use.",
-      image: "./src/assets/images/qr_code.png",
+      image: "/qr_code.png",
       link: "https://qr-code-generator-teal-one.vercel.app/"
     },
     {
       title: "Two Passion, One Purpose",
       description: "Explore my responsive demo portfolio, crafted with HTML and CSS just weeks into my coding journey. This site showcases my progress and passion for web development. Perfectly designed for all devices for modern web experiences.",
-      image: "/src/assets/images/two-passion-one-purpose.jpg",
+      image: "/two-passion-one-purpose.jpg",
       link: "https://two-passion-one-purpose.vercel.app/"
     },
     {
       title: "Project X",
       description: "Project X explores dark and light mode themes with dynamic hero banner slides, blending sleek design and functionality. A hands-on experiment showcasing my ability to create visually engaging, user-friendly web experiences.",
-      image: "/src/assets/images/project-x.jpg",
+      image: "/project-x.jpg",
       link: "https://project-x-plum-omega.vercel.app/"
     },
     {
       title: "Guess the Number Game",
       description: "Test your intuition with the Guess the Number game! A fun, interactive challenge where you predict the hidden number, blending logic and luck for an engaging, quick-play experience.",
-      image: "/src/assets/images/guess-the-number-game.jpg",
+      image: "/guess-the-number-game.jpg",
       link: "https://guess-the-number-game-neon.vercel.app/"
     },
     {
       title: "My First React Work",
       description: "Dive into my first React project, where I harnessed the power of useState and useEffect to create dynamic, interactive components. A foundational step in mastering modern React development.",
-      image: "/src/assets/images/my-first-react-work.png",
+      image: "/my-first-react-work.png",
       link: "https://myfirst-react-work.vercel.app/"
     },
     {
       title: "Perfume Card",
       description: "A sleek, responsive perfume card design, blending modern aesthetics with a minimalist approach. Perfect for showcasing products or services with a touch of elegance.",
-      image: "/src/assets/images/perfume-card.jpg",
+      image: "/perfume-card.jpg",
       link: "https://perfume-card-psi.vercel.app/"
     },
   ];
@@ -101,7 +101,7 @@ const Home = () => {
           </div>
         </div >
         <div className='glowing-border'>
-          <img src="/src/assets/images/caleb-yinusa-photo.png" alt="Caleb Yinusa" className="hero-image" />
+          <img src="/caleb-yinusa-photo.png" alt="Caleb Yinusa" className="hero-image" />
         </div>
       </div>
 
