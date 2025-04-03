@@ -1,21 +1,39 @@
-import React, { useState } from 'react'; // Import useState
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import './Navigation.css';
 
 const Navigation = () => {
-  // State to manage the visibility of the navigation links
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  // Function to toggle the navigation links
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
 
+  const closeNav = () => {
+    setIsNavOpen(false);
+  };
+
+  useEffect(() => {
+    // Only add the event listener if the nav is open
+    if (isNavOpen) {
+      document.addEventListener('click', closeNav);
+    }
+
+    // Cleanup function
+    return () => {
+      document.removeEventListener('click', closeNav);
+    };
+  }, [isNavOpen]);
+
   return (
     <nav className="navigation">
-      <div className="nav-container">
-        <h1>Caleb Yinusa</h1>
+      <div className="nav-container" onClick={(e) => e.stopPropagation()}>
+        <h1>
+          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+            Caleb Yinusa
+          </Link>
+        </h1>
 
         {/* Hamburger Menu */}
         <div className="hamburger" onClick={toggleNav}>
@@ -26,10 +44,10 @@ const Navigation = () => {
 
         {/* Navigation Links */}
         <div className={`nav-links ${isNavOpen ? 'active' : ''}`}>
-          <Link to="/" onClick={toggleNav}>Home</Link>
-          <Link to="/expertise" onClick={toggleNav}>Expertise</Link>
-          <Link to="/projects" onClick={toggleNav}>Projects</Link>
-          <Link to="/reachout" onClick={toggleNav}>Reach Out</Link>
+          <Link to="/" onClick={closeNav}>Home</Link>
+          <Link to="/expertise" onClick={closeNav}>Expertise</Link>
+          <Link to="/projects" onClick={closeNav}>Projects</Link>
+          <Link to="/reachout" onClick={closeNav}>Reach Out</Link>
         </div>
 
         {/* Social Icons */}
