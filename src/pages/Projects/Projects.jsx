@@ -9,16 +9,16 @@ const Projects = () => {
       link: "https://qr-code-generator-teal-one.vercel.app/"
     },
     {
-      title: "Two Passion, One Purpose",
-      description: "Explore my responsive demo portfolio, crafted with HTML and CSS just weeks into my coding journey. This site showcases my progress and passion for web development. Perfectly designed for all devices for modern web experiences.",
-      image: "/two-passion-one-purpose.jpg",
-      link: "https://two-passion-one-purpose.vercel.app/"
-    },
-    {
       title: "Project X",
       description: "Project X explores dark and light mode themes with dynamic hero banner slides, blending sleek design and functionality. A hands-on experiment showcasing my ability to create visually engaging, user-friendly web experiences.",
       image: "/project-x-project.jpg",
       link: "https://project-x-plum-omega.vercel.app/"
+    },
+    {
+      title: "SM Generator",
+      description: "Explore my responsive social media credentials generator, crafted with HTML, CSS and Javascript. This site showcases my progress and passion for web development. Perfectly designed for all devices for modern web experiences.",
+      image: "/two-passion-one-purpose.jpg",
+      link: "https://sm-generator-one.vercel.app/"
     },
     {
       title: "Guess the Number Game",
