@@ -41,15 +41,18 @@ const Projects = () => {
   ];
 
   const designs = [
-    { id: 1, title: 'Design 1', image: '/images/dania-exchange.PNG' },
+    { id: 1, title: 'Design 1', image: '/dania-exchange.PNG' },
     { id: 2, title: 'Design 2', image: 'emm-fire-birthday.PNG' },
     { id: 3, title: 'Design 3', image: '/tessy-delight.PNG' },
     { id: 4, title: 'Design 4', image: '/international-women-day-design.PNG' },
     { id: 5, title: 'Design 5', image: '/100-days-of-code.webp' },
     { id: 6, title: 'Design 6', image: '/natpheezy-pathetic.PNG' },
     { id: 7, title: 'Design 7', image: '/pablo-trade.PNG' },
-    { id: 8, title: 'Design 8', image: '//po-wine.PNG' },
-    { id: 9, title: 'Design 9', image: '/queency-at-cubana.PNG' },
+    { id: 8, title: 'Design 8', image: '/po-wine.PNG' },
+    { id: 9, title: 'Design 9', image: '/fabulous-flyer.png' },
+    { id: 10, title: 'Design 10', image: '/hta-podcast.png' },
+    { id: 11, title: 'Design 11', image: '/queency-at-cubana.PNG' },
+    { id: 12, title: 'Design 12', image: '/grand-opening.png' },
   ];
 
   const contentCreation = [
