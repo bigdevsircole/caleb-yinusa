@@ -30,7 +30,7 @@ const Projects = () => {
       title: "Pricing Template",
       description: "Explore my responsive pricing template, designed with HTML and CSS. This project showcases my design skills and attention to detail, providing a clean and modern layout for presenting pricing options.",
       image: "/pricing.PNG",
-      link: "https://myfirst-react-work.vercel.app/"
+      link: "https://pricing-template-gamma.vercel.app/"
     },
     {
       title: "Perfume Card",
