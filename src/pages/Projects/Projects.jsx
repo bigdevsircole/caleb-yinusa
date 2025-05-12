@@ -27,9 +27,9 @@ const Projects = () => {
       link: "https://guess-the-number-game-neon.vercel.app/"
     },
     {
-      title: "My First React Work",
-      description: "Dive into my first React project, where I harnessed the power of useState and useEffect to create dynamic, interactive components. A foundational step in mastering modern React development.",
-      image: "/project-react.jpg",
+      title: "Pricing Template",
+      description: "Explore my responsive pricing template, designed with HTML and CSS. This project showcases my design skills and attention to detail, providing a clean and modern layout for presenting pricing options.",
+      image: "/pricing.PNG",
       link: "https://myfirst-react-work.vercel.app/"
     },
     {
