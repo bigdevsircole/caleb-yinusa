@@ -178,7 +178,7 @@ const Home = () => {
             </a>
           ))}
         </div>
-        <a href="/projects" className="view-all">View All Projects</a>
+        <a href="#/projects" className="view-all">View All Projects</a>
       </div>
 
       {/* ReachOut Form Section */}
