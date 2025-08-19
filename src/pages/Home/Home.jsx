@@ -38,17 +38,29 @@ const ReachOut = () => {
 // Home Component
 const Home = () => {
   const projects = [
+      {
+      title: "Adidas Store",
+      description: "A demo e-commerce web-app replicating Adidas's shopping experience. Implements React hooks, state management, and modern CSS techniques to deliver a seamless product browsing and checkout flow.",
+      image: "/adidas-store.jpg",
+      link: "https://adidas-store.vercel.app/"
+    },
     {
-      title: "QR-Code Generator",
-      description: "You can upload your document in JPEG, JPG and PNG format while you input the URL you want the QR-code to redirect. This website will generate a QR-code below the document which can be downloaded for use.",
-      image: "/qr_code.png",
-      link: "https://qr-code-generator-teal-one.vercel.app/"
+      title: "Design Portfolio",
+      description: "A sleek, responsive design protfolio, blending modern aesthetics with a minimalist approach. Perfect for showcasing creative services with a touch of elegance.",
+      image: "/design-portfolio.jpg",
+      link: "https://caleb-design-portfolio.vercel.app/"
     },
     {
       title: "Project X",
       description: "Project X explores dark and light mode themes with dynamic hero banner slides, blending sleek design and functionality. A hands-on experiment showcasing my ability to create visually engaging, user-friendly web experiences.",
       image: "/project-x-project.jpg",
       link: "https://project-x-plum-omega.vercel.app/"
+    },
+    {
+      title: "QR-Code Generator",
+      description: "You can upload your document in JPEG, JPG and PNG format while you input the URL you want the QR-code to redirect. This website will generate a QR-code below the document which can be downloaded for use.",
+      image: "/qr_code.png",
+      link: "https://qr-code-generator-teal-one.vercel.app/"
     },
     {
       title: "SM Generator",
@@ -67,6 +79,12 @@ const Home = () => {
       description: "Dive into my first React project, where I harnessed the power of useState and useEffect to create dynamic, interactive components. A foundational step in mastering modern React development.",
       image: "/my-first-react-work.png",
       link: "https://myfirst-react-work.vercel.app/"
+    },
+    {
+      title: "Frontend Aptitude Test",
+      description: "Dynamic assessment tool with integrated code editor, automated test runners, and real-time validation. Demonstrates advanced React patterns, state management, and interactive UI design for technical evaluation workflows.",
+      image: "/frontend-development.jpg",
+      link: "https://cfat.vercel.app/"
     },
     {
       title: "Perfume Card",
