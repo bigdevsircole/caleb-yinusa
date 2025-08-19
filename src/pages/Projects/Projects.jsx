@@ -79,7 +79,7 @@ const Projects = () => {
     { id: 18, title: 'Design 18', image: '/hse-document-audit.png' },
     { id: 19, title: 'Design 19', image: '/welding-ppe.png' },
     { id: 20, title: 'Design 20', image: '/gas-leakages.png' },
-    { id: 21, title: 'Design 21', image: '/confined_space-safety.png' },
+    // { id: 21, title: 'Design 21', image: '/confined_space-safety.png' },
     { id: 22, title: 'Design 22', image: '/reflective-jacket.png' },
     
   ];
