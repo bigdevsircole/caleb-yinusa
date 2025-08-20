@@ -134,9 +134,9 @@ const Home = () => {
           <p className="hero-description">
           With more than a decade of hands-on experience in the tech industry, I’ve grown from modest beginnings, driven by an insatiable passion for learning and a firm belief that "Impossible is Nonsense." Throughout my journey, I’ve embraced challenges as opportunities to innovate and bring creative solutions to life.
             <br /> <br />
-            As a Full Stack Developer, I specialize in designing and building seamless solutions that align with clients' business objectives while consistently surpassing their expectations. My expertise lies in creating smooth digital experiences, from frontend to backend, using technologies like JavaScript, React.JS, Next.JS, Node.JS, Git & GitHub, EmailJS, CSS, HTML, Photoshop, CorelDraw, WordPress, Canva, and Generative AI.
+            As a Frontend Developer, I specialize in coding SEO standard websites and scalable web apps that align with client's objectives while consistently surpassing their expectations. My expertise lies in creating smooth digital experiences using technologies like JavaScript, React, NextJS, NodeJS, Git & GitHub, EmailJS, CSS, HTML, Photoshop, CorelDraw, WordPress, Canva, and Generative AI.
             <br /> <br />
-            Beyond development, my skills extend into the world of design, but my journey doesn’t end there. I am also a dedicated Cyber Warrior, committed to protecting digital environments from evolving threats. Security is always a top priority in every project I undertake.
+            Beyond development, my skills extend into the world of design, digital marketing, and IT support technician but my journey doesn’t end there. I am also a dedicated Cyber Warrior, committed to protecting digital environments from evolving threats. Security is always a top priority in every project I undertake.
             <br /> <br />
             My career highlights include collaborations with respected organizations such as the Institute of Industrial Development, Bright Mind Academy, and RLABS in Nigeria. I’ve contributed my expertise to impactful projects across various industries, leaving a lasting impression on every initiative I’ve been part of.
           </p>
