@@ -94,6 +94,37 @@ const Home = () => {
     },
   ];
 
+  const designs = [
+    { id: 1, title: 'Design 1', image: '/dania-exchange.PNG' },
+    { id: 2, title: 'Design 2', image: '/full-height-protection.png' },
+    { id: 3, title: 'Design 3', image: 'emm-fire-birthday.PNG' },
+    { id: 4, title: 'Design 4', image: '/tessy-delight.PNG' },
+    { id: 5, title: 'Design 5', image: '/respiratory-protection.png' },
+    { id: 6, title: 'Design 6', image: '/fall-arrest-systems.png' },
+    { id: 7, title: 'Design 7', image: '/site-hazard-signages.png' },
+    { id: 8, title: 'Design 8', image: '/international-women-day-design.PNG' },
+    { id: 9, title: 'Design 9', image: '/100-days-of-code.webp' },
+    { id: 10, title: 'Design 10', image: '/natpheezy-pathetic.PNG' },
+    { id: 11, title: 'Design 11', image: '/pablo-trade.PNG' },
+    { id: 12, title: 'Design 12', image: '/po-wine.PNG' },
+    { id: 13, title: 'Design 13', image: '/fabulous-flyer.png' },
+    { id: 14, title: 'Design 14', image: '/hta-podcast.png' },
+    { id: 15, title: 'Design 15', image: '/queency-at-cubana.PNG' },
+    { id: 16, title: 'Design 16', image: '/grand-opening.png' },
+    { id: 17, title: 'Design 17', image: '/first-aid-kit-flyer.png' },
+    { id: 18, title: 'Design 18', image: '/hse-document-audit.png' },
+    { id: 19, title: 'Design 19', image: '/welding-ppe.png' },
+    { id: 20, title: 'Design 20', image: '/gas-leakages.png' },
+    // { id: 21, title: 'Design 21', image: '/confined_space-safety.png' },
+    { id: 22, title: 'Design 22', image: '/reflective-jacket.png' },
+  ];
+
+  const contentCreation = [
+    { id: 1, title: 'Video 1', video: '/abson-textile.mp4' },
+    { id: 2, title: 'Video 2', video: '/dorime-freestyle.mp4' },
+    { id: 3, title: 'Video 3', video: '/grill24.mp4' },
+  ];
+
   return (
     <div className="home">
       {/* Hero Section */}
@@ -178,7 +209,34 @@ const Home = () => {
             </a>
           ))}
         </div>
-        <a href="/projects" className="view-all">View All Projects</a>
+
+        {/* Designs Section */}
+      <section className="designs-section">
+        <h1>Designs</h1>
+        <div className="designs-grid">
+          {designs.map((design) => (
+            <div key={design.id} className="design-card">
+              <img src={design.image} alt={design.title} />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Content Creation Section */}
+      <section className="content-creation-section">
+        <h1>Content Creation</h1>
+        <div className="content-grid">
+          {contentCreation.map((content) => (
+            <div key={content.id} className="content-card">
+              <video controls>
+                <source src={content.video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          ))}
+        </div>
+      </section>
+
       </div>
 
       {/* ReachOut Form Section */}
