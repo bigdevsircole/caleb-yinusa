@@ -158,15 +158,15 @@ const Home = () => {
       {/* Expertise Section */}
       <div className="expertise-categories">
         <div className="category">
-          <h2>Fullstack Development</h2>
+          <h2>Frontend Development</h2>
           <ul>
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
             <li>React.js</li>
             <li>Tailwind CSS</li>
-            <li>Next.js</li>
-            <li>Node.js</li>
+            {/* <li>Next.js</li> */}
+            {/* <li>Node.js</li> */}
             <li>Git & GitHub</li>
           </ul>
         </div>
