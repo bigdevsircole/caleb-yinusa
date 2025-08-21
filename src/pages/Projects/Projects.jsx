@@ -9,6 +9,12 @@ const Projects = () => {
       link: "https://adidas-store.vercel.app/"
     },
     {
+      title: "Mobile Banking Demo",
+      description: "A responsive web-app showcasing a modern mobile banking interface. Built with HTML, JavaScript and native CSS, it features account overviews, transaction history, fund transfers, and a clean, intuitive design for a smooth user experience.",
+      image: "/mobile-bank-demo.jpg",
+      link: "https://mobile-banking-demo.vercel.app/"
+    },
+    {
       title: "Design Portfolio",
       description: "A sleek, responsive design protfolio, blending modern aesthetics with a minimalist approach. Perfect for showcasing creative services with a touch of elegance.",
       image: "/design-portfolio.jpg",
