@@ -164,7 +164,7 @@ const Home = () => {
             <li>CSS</li>
             <li>JavaScript</li>
             <li>React.js</li>
-            <li>Tailwind CSS</li>
+            {/* <li>Tailwind CSS</li> */}
             {/* <li>Next.js</li> */}
             {/* <li>Node.js</li> */}
             <li>Git & GitHub</li>
