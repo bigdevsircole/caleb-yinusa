@@ -1,42 +1,23 @@
-import React, { useRef } from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './Home.css';
-import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-// ReachOut Component
-const ReachOut = () => {
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm('service_jqqfn9q', 'template_pjyxg1p', form.current, 'y-fZwQR7f20KakfWj')
-      .then(() => {
-        toast.success('Message sent successfully!');
-      })
-      .catch(() => {
-        toast.error('Failed to send message. Please try again.');
-      });
-  };
-
-  return (
-    <div className="reach-out-page">
-      <h1>ReachOut Form</h1>
-      <p>Feel free to send us a message when you have a project </p>
-      <form ref={form} onSubmit={sendEmail} className="reach-out-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required />
-        <button type="submit">Submit</button>
-      </form>
-      <ToastContainer />
-    </div>
-  );
-};
+import ReachOut from '../ReachOut/ReachOut';
 
 // Home Component
 const Home = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Use hash (/#section) for deep linking
+    if (location && location.hash) {
+      const id = location.hash.replace('#', '');
+      // slight delay to ensure DOM has rendered
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+    }
+  }, [location]);
   const projects = [
       {
       title: "Adidas Store",
@@ -52,7 +33,7 @@ const Home = () => {
     },
     {
       title: "Design Portfolio",
-      description: "A sleek, responsive design protfolio, blending modern aesthetics with a minimalist approach. Perfect for showcasing creative services with a touch of elegance.",
+      description: "A sleek, responsive design portfolio, blending modern aesthetics with a minimalist approach. Perfect for showcasing creative services with a touch of elegance.",
       image: "/design-portfolio.jpg",
       link: "https://caleb-design-portfolio.vercel.app/"
     },
@@ -132,19 +113,19 @@ const Home = () => {
   ];
 
   return (
-    <div className="home">
+    <div id="home" className="home">
       {/* Hero Section */}
       <div className="hero">
         <div className="hero-content">
-          <h1 className="hero-title">A developer and more</h1>
+          <h1 className="hero-title">A Developer & More</h1>
           <p className="hero-description">
-          With more than a decade of hands-on experience in the tech industry, I’ve grown from modest beginnings, driven by an insatiable passion for learning and a firm belief that "Impossible is Nonsense." Throughout my journey, I’ve embraced challenges as opportunities to innovate and bring creative solutions to life.
+          With over 10 years of experience in the tech industry, I've dedicated my career to helping businesses and individuals leverage technology to achieve their goals.
             <br /> <br />
-            As a Frontend Developer, I specialize in coding SEO standard websites and scalable web apps that align with client's objectives while consistently surpassing their expectations. My expertise lies in creating smooth digital experiences using technologies like JavaScript, React, NextJS, NodeJS, Git & GitHub, EmailJS, CSS, HTML, Photoshop, CorelDraw, WordPress, Canva, and Generative AI.
+            As a Frontend Developer, I specialize in coding SEO standard websites and scalable web apps that align with client's objectives while consistently surpassing their expectations.
             <br /> <br />
-            Beyond development, my skills extend into the world of design, digital marketing, and IT support technician but my journey doesn’t end there. I am also a dedicated Cyber Warrior, committed to protecting digital environments from evolving threats. Security is always a top priority in every project I undertake.
+            Beyond development, I am also a dedicated Cyber Warrior, committed to protecting digital environments from evolving threats. Security is always a top priority in every project I undertake.
             <br /> <br />
-            My career highlights include collaborations with respected organizations such as the Institute of Industrial Development, Bright Mind Academy, and RLABS in Nigeria. I’ve contributed my expertise to impactful projects across various industries, leaving a lasting impression on every initiative I’ve been part of.
+            I believe in building long-term relationships with my clients, providing not just services but sustainable solutions that grow with their businesses.
           </p>
           <div className="hero-buttons">
             <a href="https://wa.me/+2348180402086" target="_blank" rel="noopener noreferrer" className="hire-me-button">
@@ -161,19 +142,15 @@ const Home = () => {
       </div>
 
 
-      {/* Expertise Section */}
-      <div className="expertise-categories">
+  {/* Expertise Section */}
+  <div id="expertise" className="expertise-categories">
         <div className="category">
-          <h2>Frontend Development</h2>
+          <h2>Web Development</h2>
           <ul>
-            <li>HTML</li>
-            <li>CSS</li>
+            <li>HTML & CSS</li>
             <li>JavaScript</li>
-            <li>React.js</li>
-            {/* <li>Tailwind CSS</li> */}
-            {/* <li>Next.js</li> */}
-            {/* <li>Node.js</li> */}
-            <li>Git & GitHub</li>
+            <li>WordPress</li>
+            <li>React</li>
           </ul>
         </div>
 
@@ -188,18 +165,18 @@ const Home = () => {
         </div>
 
         <div className="category">
-          <h2>Digital Marketing</h2>
+          <h2>Other Services</h2>
           <ul>
-            <li>Email Marketing</li>
-            <li>Social Media Marketing</li>
-            <li>Search Engine Optimization</li>
-            <li>FB and IG Ads Setup</li>
+            <li>Facebook & Instagram Ads</li>
+            <li>Content Creation</li>
+            <li>Video Editing</li>
+            <li>Coding Class</li>
           </ul>
         </div>
       </div>
 
-      {/* Projects Section */}
-      <div className="projects">
+  {/* Projects Section */}
+  <div id="projects" className="projects">
         <h2>Projects</h2>
         <p>Here are some of the projects I've worked on:</p>
         <div className="project-list">

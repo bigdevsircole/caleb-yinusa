@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import './Navigation.css';
 
 const Navigation = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const location = useLocation();
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -26,28 +27,38 @@ const Navigation = () => {
     };
   }, [isNavOpen]);
 
+  // navigation uses anchors with absolute hashes; clicks close the mobile menu via `closeNav`
+
   return (
     <nav className="navigation">
       <div className="nav-container" onClick={(e) => e.stopPropagation()}>
         <h1>
-          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <a href="/" onClick={closeNav} style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>
             Caleb Yinusa
-          </Link>
+          </a>
         </h1>
 
         {/* Hamburger Menu */}
-        <div className="hamburger" onClick={toggleNav}>
+        <div
+          className="hamburger"
+          role="button"
+          tabIndex={0}
+          aria-label="Toggle navigation"
+          aria-expanded={isNavOpen}
+          onClick={toggleNav}
+          onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') toggleNav(); }}
+        >
           <div></div>
           <div></div>
           <div></div>
         </div>
 
         {/* Navigation Links */}
-        <div className={`nav-links ${isNavOpen ? 'active' : ''}`}>
-          <Link to="/" onClick={closeNav}>Home</Link>
-          <Link to="/expertise" onClick={closeNav}>Expertise</Link>
-          <Link to="/projects" onClick={closeNav}>Projects</Link>
-          <Link to="/reachout" onClick={closeNav}>Reach Out</Link>
+  <div className={`nav-links ${isNavOpen ? 'active' : ''}`} role="navigation" aria-label="Main Navigation" aria-hidden={!isNavOpen && window.innerWidth <= 768}>
+          <a href="/" onClick={closeNav} aria-current={location.pathname === '/' && !location.hash ? 'true' : undefined}>Home</a>
+          <a href="/#expertise" onClick={closeNav} aria-current={location.hash === '#expertise' ? 'true' : undefined}>Expertise</a>
+          <a href="/#projects" onClick={closeNav} aria-current={location.hash === '#projects' ? 'true' : undefined}>Projects</a>
+          <a href="/#reachout" onClick={closeNav} aria-current={location.hash === '#reachout' ? 'true' : undefined}>Reach Out</a>
         </div>
 
         {/* Social Icons */}
