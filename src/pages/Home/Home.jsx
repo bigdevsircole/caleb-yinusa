@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import './Home.css';
-import ReachOut from '../ReachOut/ReachOut';
+import ReachOut from '../ReachOut/ReachOut.jsx';
 
 // Home Component
 const Home = () => {
@@ -181,7 +181,19 @@ const Home = () => {
         <p>Here are some of the projects I've worked on:</p>
         <div className="project-list">
           {projects.map((project, index) => (
-            <a href={project.link} key={index} className="project-item" style={{ backgroundImage: `url(${project.image})` }}>
+            <div
+              key={index}
+              className="project-item"
+              style={{ backgroundImage: `url(${project.image})` }}
+              role="link"
+              tabIndex={0}
+              onClick={() => window.open(project.link, '_blank', 'noopener')}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  window.open(project.link, '_blank', 'noopener');
+                }
+              }}
+            >
               <div className="project-content">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
@@ -189,7 +201,7 @@ const Home = () => {
                   View
                 </a>
               </div>
-            </a>
+            </div>
           ))}
         </div>
 
