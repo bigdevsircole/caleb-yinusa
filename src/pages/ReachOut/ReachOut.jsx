@@ -25,7 +25,7 @@ const ReachOut = () => {
 
     try {
       const res = await emailjs.sendForm(
-        'service_jqqfn9q',
+        'service_uae2zmi',
         'template_pjyxg1p',
         form.current,
         'y-fZwQR7f20KakfWj'

@@ -168,9 +168,9 @@ const Home = () => {
           <h2>Other Services</h2>
           <ul>
             <li>Facebook & Instagram Ads</li>
+            <li>Coding & IT Support</li>
             <li>Content Creation</li>
             <li>Video Editing</li>
-            <li>Coding Class</li>
           </ul>
         </div>
       </div>
